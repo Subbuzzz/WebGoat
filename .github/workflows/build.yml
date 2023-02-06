@@ -70,5 +70,3 @@ jobs:
               restore-keys: ubuntu-latest-m2-
         - name: Test with Maven
           run: mvn --no-transfer-progress verify
-- name: Veracode scan results to GitHub issues Action
-  uses: veracode/veracode-flaws-to-issues@v2.1.0
