@@ -1,0 +1,2 @@
+- name: Veracode scan results to GitHub issues Action
+  uses: veracode/veracode-flaws-to-issues@v2.1.0
