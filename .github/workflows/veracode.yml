@@ -56,14 +56,3 @@ jobs:
       with:
         # Path to SARIF file relative to the root of the repository
         sarif_file: veracode-results.sarif
-    - name: Veracode scan results to GitHub issues Action
-  # You may pin to the exact commit or the version.
-  # uses: veracode/veracode-flaws-to-issues@f4c354711a2b44ae3c2741c76fff935814c7f077
-      uses: veracode/veracode-flaws-to-issues@v2.1.0
-      with:
-    # Scan results file
-            scan-results-json: filtered_results.json
-    # GitHub token to access the repo
-            github-token: ${{ github.token }}
-    # Delay (in seconds) between entering Issues into GitHub (due to rate limiting)
-            wait-time:  optional, default is 2
