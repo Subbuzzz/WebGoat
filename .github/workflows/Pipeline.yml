@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: mvn -B package --file Webgoat/pom.xml
+        run: mvn -B package --file ./pom.xml
   pipeline-scan:
     runs-on: ubuntu-latest
     steps:
