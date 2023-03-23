@@ -57,3 +57,31 @@ jobs:
       with:
         # Path to SARIF file relative to the root of the repository
         sarif_file: veracode-results.sarif
+  on: 
+  pull_request_review: # a trigger when a Pull Request Review submitted
+    types: [submitted]
+        
+  workflow_dispatch:
+
+  jobs:
+  veracode-sandbox-task:
+    runs-on: ubuntu-latest
+    name: Pull Request Review Submitted
+
+    steps:
+
+      ... # your other job steps
+
+    - name: Promote Scan on Approval
+        # run only if the pull request got approved
+        if: ${{ github.event.review.state == 'approved' }}
+        env:
+          VERACODE_API_ID: '${{ secrets.VERACODE_API_ID }}'
+          VERACODE_API_SECRET: '${{ secrets.VERACODE_API_SECRET }}'
+        uses: lerer/veracode-sandboxes-helper@v1.0.1 
+        with:
+          activity: "promote-latest-scan"
+          app-name: "Frost"
+          sandbox-name: "Development Sandbox Test" # "${{ github.event.pull_request.head.ref }}"
+          delete-on-promote: true # Optional: also Deleting the Sandbox 
+      
