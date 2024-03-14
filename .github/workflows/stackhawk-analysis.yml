@@ -53,7 +53,7 @@ jobs:
 
       - name: Start your service
         run: docker pull webgoat/webgoat-7.1 &
-            docker run -p 8080:8080 -t webgoat/webgoat-7.1                  # ✏️ Update this to run your own service to be scanned
+            docker run -d -p 8080:8080 -t webgoat/webgoat-7.1                  # ✏️ Update this to run your own service to be scanned
 
       - name: Run HawkScan
         uses: stackhawk/hawkscan-action@v2
