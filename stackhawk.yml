@@ -19,7 +19,7 @@ app:
   # Docs: https://docs.stackhawk.com/
   # Contact Support: support@stackhawk.com
 app:
-  waitForAppTarget:5000 ms
+  waitForAppTarget:5000
     path: /WebGoat
 hawk:
   spider:
