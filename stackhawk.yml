@@ -20,7 +20,7 @@ app:
   # Contact Support: support@stackhawk.com
 app:
   waitForAppTarget:
-    path: "/WebGoat"
+    path: ['/WebGoat']
 hawk:
   spider:
-    seedPaths: "/WebGoat"
+    seedPaths: ['/WebGoat']
