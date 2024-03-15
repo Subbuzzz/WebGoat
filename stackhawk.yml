@@ -19,6 +19,7 @@ app:
   # Docs: https://docs.stackhawk.com/
   # Contact Support: support@stackhawk.com
 app:
+  host:['localhost']
   waitForAppTarget:
     path: ['/WebGoat']
 hawk:
