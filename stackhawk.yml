@@ -23,4 +23,4 @@ app:
     path: "/WebGoat"
 hawk:
   spider:
-    seedPaths: "/WebGoat"
+    seedPaths: "/ABCD"
