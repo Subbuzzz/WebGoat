@@ -21,7 +21,7 @@ app:
 app:
   host:['localhost']
 #  waitForAppTarget:
-  path: ['/WebGoat']
+#  path: ['/WebGoat']
 hawk:
   spider:
     seedPaths: ['/WebGoat']
